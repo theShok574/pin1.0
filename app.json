@@ -1,32 +1,41 @@
 {
-  "expo": {
-    "name": "pinclone2.0",
-    "slug": "pinclone2.0",
-    "version": "1.0.0",
-    "orientation": "default",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+  
+  
+    "expo": {
+      "name": "pinclone2.0",
+      "slug": "pinclone2.0",
+      "version": "1.0.0",
+      "orientation": "default",
+      "icon": "./assets/images/icon.png",
+      "scheme": "myapp",
+      "userInterfaceStyle": "automatic",
+      "splash": {
+        "image": "./assets/images/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#fff"
+      },
+      "assetBundlePatterns": [
+        "**/*"
+      ],
+      "ios": {
+        "supportsTablet": true
+      },
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/images/adaptive-icon.png",
+          "backgroundColor": "#fff"
+        }
+      },
+      "web": {
+        "bundler": "metro",
+        "favicon": "./assets/images/favicon.png"
+          
+        
       }
-    },
-    "web": {
-      "bundler": "metro",
-      "favicon": "./assets/images/favicon.png"
     }
+    
   }
-}
+
+  
+  
+    

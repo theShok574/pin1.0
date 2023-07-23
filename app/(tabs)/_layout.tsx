@@ -1,7 +1,7 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
-import { Pressable, useColorScheme } from 'react-native';
-
+import { Pressable, useColorScheme, View, Text } from 'react-native';
+import CreatePin from './CreatePin'
 import Colors from '../../constants/Colors';
 
 /**
@@ -10,7 +10,7 @@ import Colors from '../../constants/Colors';
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
-}) {
+}): JSX.Element {
   return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
 }
 
@@ -21,12 +21,15 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-      }}>
+        tabBarShowLabel: false,
+      }}
+    >
       <Tabs.Screen
         name="HomeScreen"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          headerTitleAlign: 'center',
+          title: 'Home',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -43,11 +46,22 @@ export default function TabLayout() {
           ),
         }}
       />
+
+      <Tabs.Screen
+        name="CreatePin"
+        options={{
+          title: 'CreatePin',
+          headerTitleAlign: 'center',
+          tabBarIcon: ({ color }) => <TabBarIcon name="plus" color={color} />,
+        }}
+      />
+
       <Tabs.Screen
         name="ProfileScreen"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Profile',
+          headerTitleAlign:'center',
+          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         }}
       />
     </Tabs>
